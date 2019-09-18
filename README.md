@@ -18,6 +18,6 @@ Example 1
 import argv from '@dkh-dev/argv';
 
 console.log(argv);
-// ts-node test --a=b -b -c d e --e -f "g h" -i=j --k l -m 0
-// => { a: 'b', b: '', c: 'd', e: '', f: 'g h', i: 'j', k: 'l', m: '0' }
+// ts-node test --a=b -b -c d e --e -f "g h" -i=j --k l -m 0 -o
+// => { a: 'b', b: '', c: 'd', e: '', f: 'g h', i: 'j', k: 'l', m: '0', o: '' }
 ````
