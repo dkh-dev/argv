@@ -12,12 +12,13 @@ $ yarn install @dkh-dev/argv
 
 Example 1
 
-````typescript
-// index.ts
+```javascript
+// index.js
 
-import argv from '@dkh-dev/argv';
+const argv
 
 console.log(argv);
-// ts-node test --a=b -b -c d e --e -f "g h" -i=j --k l -m 0 -o
-// => { a: 'b', b: '', c: 'd', e: '', f: 'g h', i: 'j', k: 'l', m: '0', o: '' }
-````
+
+// $ node test --a=b -b -c d e --e --f="g h" -i=j -j='k l' -l=123
+// => { a: 'b', b: true, c: 'd', e: true, f: 'g h', i: 'j', j: "'k", k: 123 }
+```

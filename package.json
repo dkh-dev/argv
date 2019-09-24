@@ -1,17 +1,14 @@
 {
   "name": "@dkh-dev/argv",
-  "version": "1.1.1",
+  "version": "2.0.0",
   "description": "Node.js process.argv parsed",
   "main": "index.js",
-  "types": "index.d.ts",
   "files": [
-    "index.js",
-    "index.d.ts"
+    "index.js"
   ],
   "scripts": {
-    "build": "tsc",
-    "test": "ts-node test --a=b -b -c d e --e -f \"g h\" -i=j --k l -m 0 -o",
-    "prepublishOnly": "npm run build & npm test"
+    "test": "node test --a=b -b -c d e --e --f=\"g h\" -i=j -j='k l' -k=123",
+    "prepublishOnly": "npm test"
   },
   "repository": {
     "type": "git",
@@ -33,13 +30,9 @@
   },
   "homepage": "https://github.com/dkh-dev/argv#readme",
   "devDependencies": {
-    "@types/node": "^11.9.4",
-    "@types/tape": "^4.2.33",
-    "tape": "^4.10.1",
-    "ts-node": "^8.0.2",
-    "typescript": "^3.3.3"
+    "tape": "^4.10.1"
   },
   "dependencies": {
-    "@dkh-dev/parse-argv": "^1.1.1"
+    "@dkh-dev/parse-argv": "^2.0.0"
   }
 }
