@@ -1,13 +1,20 @@
 {
   "name": "@dkh-dev/argv",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Node.js process.argv parsed",
   "main": "index.js",
   "files": [
     "index.js"
   ],
+  "dependencies": {
+    "@dkh-dev/parse-argv": "^2.0.1"
+  },
+  "devDependencies": {
+    "@dkh-dev/eslint-config": "^1.6.0",
+    "tape": "^4.10.1"
+  },
   "scripts": {
-    "test": "node test --a=b -b -c d e --e --f=\"g h\" -i=j -j='k l' -k=123",
+    "test": "node test --a=b -b -c d e --e --f=\"g h\" -i=123 -j=/k l/ -k",
     "prepublishOnly": "npm test"
   },
   "repository": {
@@ -28,11 +35,5 @@
   "bugs": {
     "url": "https://github.com/dkh-dev/argv/issues"
   },
-  "homepage": "https://github.com/dkh-dev/argv#readme",
-  "devDependencies": {
-    "tape": "^4.10.1"
-  },
-  "dependencies": {
-    "@dkh-dev/parse-argv": "^2.0.0"
-  }
+  "homepage": "https://github.com/dkh-dev/argv#readme"
 }

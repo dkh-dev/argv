@@ -5,19 +5,22 @@ const test = require('tape')
 const argv = require('..')
 
 
-// $ node test --a=b -b -c d e --e --f="g h" -i=j -j='k l' -l=123
+//                           e -> ignored                 l/ -> ignored
+// $ node test --a=b -b -c d e --e --f="g h" -i=123 -j=/k l/ -k
 
-test('Test with process.argv', t => {
-    const { a, b, c, e, f, i, j, k } = argv
+test('argv', t => {
+  const { length } = Object.keys(argv)
+  const { a, b, c, e, f, i, j, k } = argv
 
-    t.equal(a, 'b')
-    t.equal(b, true)
-    t.equal(c, 'd')
-    t.equal(e, true)
-    t.equal(f, 'g h')
-    t.equal(i, 'j')
-    t.equal(j, "'k")
-    t.equal(k, 123)
+  t.equal(length, 8)
+  t.equal(a, 'b')
+  t.equal(b, true)
+  t.equal(c, 'd')
+  t.equal(e, true)
+  t.equal(f, 'g h')
+  t.equal(i, 123)
+  t.equal(j, '/k')
+  t.equal(k, true)
 
-    t.end()
+  t.end()
 })
