@@ -5,8 +5,8 @@ const test = require('tape')
 const argv = require('..')
 
 
-//                           e -> ignored                 l/ -> ignored
 // $ node test parse --a=b -b -c d e --e --f="g h" -i=123 -j=/k l/ -k
+//          -0 parse                -1 e                     -2 l/
 
 test('argv', t => {
   const { length } = Object.keys(argv)

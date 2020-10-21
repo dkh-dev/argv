@@ -1,13 +1,13 @@
 {
   "name": "@dkh-dev/argv",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Node.js process.argv parsed",
   "main": "index.js",
   "files": [
     "index.js"
   ],
   "dependencies": {
-    "@dkh-dev/parse-argv": "^2.1.0"
+    "@dkh-dev/parse-argv": "^2.1.1"
   },
   "devDependencies": {
     "@dkh-dev/eslint-config": "^1.6.2",
