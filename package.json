@@ -1,20 +1,20 @@
 {
   "name": "@dkh-dev/argv",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "description": "Node.js process.argv parsed",
   "main": "index.js",
   "files": [
     "index.js"
   ],
   "dependencies": {
-    "@dkh-dev/parse-argv": "^2.1.1"
+    "@dkh-dev/parse-argv": "^2.2.0"
   },
   "devDependencies": {
     "@dkh-dev/eslint-config": "^1.6.2",
     "tape": "^5.0.1"
   },
   "scripts": {
-    "test": "node test parse --a=b -b -c d e --e --f=\"g h\" -i=123 -j=/k l/ -k",
+    "test": "node test parse --a=b -b -c d e --e --f=\"g h\" -i=123 -j=/k l/ -k false",
     "prepublishOnly": "npm test"
   },
   "repository": {

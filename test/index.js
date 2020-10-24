@@ -5,7 +5,7 @@ const test = require('tape')
 const argv = require('..')
 
 
-// $ node test parse --a=b -b -c d e --e --f="g h" -i=123 -j=/k l/ -k
+// $ node test parse --a=b -b -c d e --e --f="g h" -i=123 -j=/k l/ -k false
 //          -0 parse                -1 e                     -2 l/
 
 test('argv', t => {
@@ -25,7 +25,7 @@ test('argv', t => {
   t.equal(f, 'g h')
   t.equal(i, 123)
   t.equal(j, '/k')
-  t.equal(k, true)
+  t.equal(k, false)
 
   t.end()
 })
