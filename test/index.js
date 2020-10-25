@@ -6,7 +6,7 @@ const argv = require('..')
 
 
 // $ node test parse --a=b -b -c d e --e --f="g h" -i=123 -j=/k l/ -k false
-//          -0 parse                -1 e                     -2 l/
+//          0: parse                1: e                     2: l/
 
 test('argv', t => {
   const { length } = Object.keys(argv)
@@ -26,6 +26,12 @@ test('argv', t => {
   t.equal(i, 123)
   t.equal(j, '/k')
   t.equal(k, false)
+
+  try {
+    t.deepEqual([ ...argv ], [ 'parse', 'e', 'l/' ])
+  } catch (err) {
+    t.fail(err.message)
+  }
 
   t.end()
 })
